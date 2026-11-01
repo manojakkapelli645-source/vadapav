@@ -1,0 +1,3 @@
+# Netlify: publish this folder as a static site (no build step).
+[build]
+  publish = "."

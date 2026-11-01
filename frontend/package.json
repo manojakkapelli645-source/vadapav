@@ -1,0 +1,8 @@
+{
+  "name": "restaurant-frontend",
+  "version": "1.0.0",
+  "description": "Digital restaurant system - frontend (static pages, no build step)",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

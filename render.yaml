@@ -1,0 +1,22 @@
+# Render Blueprint: deploys the backend as a free web service.
+services:
+  - type: web
+    name: restaurant-backend
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.13.0
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DEV_OTP
+        value: "true"
+      - key: ADMIN_PHONES
+        sync: false   # Render will ask you for this: your 10-digit number(s)
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: RESTAURANT_NAME
+        value: My Restaurant
